@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "build:revc": "clang ./revc/main.c -o .output/server/bin/revc",
+    "dev": "nuxt dev",
+    "dev:revc": "nodemon --exec 'clang ./revc/main.c -o bin/revc' --watch ./revc --ext c,h",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.21",
+    "nuxt": "^3.3.1"
+  },
+  "dependencies": {
+    "execa": "^7.1.1"
+  }
+}
